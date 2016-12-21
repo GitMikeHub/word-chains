@@ -1,0 +1,33 @@
+Cloud Team Programming Challenge by Michael Coleman | mike007coleman@gmail.com
+Thanks of the opportunity to do this challenge.
+At the risk of sounding crazy, this challenge was alot of fun! :D
+
+I used PHP as my coding language since I've been programming mostly with it for the last 8 years.
+I've heard PHP can be slow to I hope that it was not a bad choice.
+
+I tired a few approaches. 
+Prime Product Method:
+    Was too slow and used way too much memory.
+    I tried to use math functions (gmp or BC) to handle the HUGE numbers but all the conversions were killing performance.
+
+Bit Mask approach.  
+    works well for English character because PHP max's int is 31 bit plus sign    
+    quickly determine if two words are anagram++ by seeing if the difference is a factor of 2
+    this removed the requirement to sort the strings by their letters (another approach I tried)
+    I also grouped the words into "buckets" based on their length. I then use this length
+    to limit the set I look at while searching for the next anagram.
+    If I find a chain with a length longer than the other ranges I skip over those.
+    
+Cons:
+    Probably doesn't work with multibyte chars, didn't have time to work it to handle those.
+    I would have to start using the math functions mentioned above or go with a different approach.
+    possibly levenshtein or calculate the edit distance for words with a length + 1
+
+   
+You should be able to run the script either thru the browser or the command line.
+Both display usage info.
+I'm running 
+Windows XAMPP stack
+PHP Version 5.6.3
+Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 
+    
